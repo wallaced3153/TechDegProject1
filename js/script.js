@@ -8,14 +8,8 @@ var quotes = [
   { quote: "Who are you to judge the life I live? I know I'm not perfect and I don't live to be but before you start pointing fingers... make sure you hands are clean!", source: "-Bob Marley", citation: "Marley' First recorded single, Federal Studios", year: "1978"},
 ];
 
-
 //printQuote() to call and display initial quote prior to button press
 printQuote();
-
-//set timer for auto quote change
-
-
-setInterval(printQuote(), 3000);
 
 // calls out to get new random quote & returns a quote from the 'quotes' Array
 function getRandomQuote() {
@@ -28,18 +22,15 @@ function printQuote() {
 //store the returns the concatenated string (printQuote) as storeQuote
   var storeQuote = getRandomQuote();
 
-
-
   var HTMLoutput = '<p class="quote">' + storeQuote.quote + '</p>';
-    HTMLoutput += '<p class="source">' + storeQuote.source + '</p>';
+      HTMLoutput += '<p class="source">' + storeQuote.source + '</p>';
 
 //if the quote citation is not undefined then send the text to the HTMLoutput
   if (storeQuote.citation !== undefined ) {
-    HTMLoutput += '<span class="citation">' + storeQuote.citation + '</span>';
+      HTMLoutput += '<span class="citation">' + storeQuote.citation + '</span>';
 
 //if the citation field is anything else then the function carries on
 } else {
-
     }
 
 //if the year field is not undefined then the text to the HTMLoutput
@@ -48,7 +39,6 @@ function printQuote() {
 
   //if the year field is anything else then the function carries on
   } else {
-
     }
 
     HTMLoutput += '</p>';
